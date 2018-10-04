@@ -1,0 +1,23 @@
+<body>
+	<div class="container">
+		<header>
+			<h1 class="center"><span class="extra-clr">IFS</span> app</h1>
+
+			{{#if currentUser}}
+				<p>You have logged as <span class="extra-clr">{{> loginButtons}}</span></p>
+				<p>You are subscribed on (<span class="extra-clr">{{subscriptionsCount}}</span>) people</p>
+				<p>You are followed by (<span class="extra-clr">{{followersCount}}</span>) people</p>
+			{{else}}
+				<p class="extra-clr">{{> loginButtons}}</p>
+			{{/if}}
+			
+			<input class="find-user" type="text" name="username" placeholder="Find user by name">			
+		</header>
+	  <ul class="users-list">
+	  	{{#each users}}
+	    	{{> user}}
+			{{/each}}
+	  </ul>		
+	</div>
+
+</body>

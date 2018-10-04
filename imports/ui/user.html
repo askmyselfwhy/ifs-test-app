@@ -1,0 +1,15 @@
+<template name="user">
+	<li class="user-item">
+		<h2>{{username}}</h2>
+
+		{{#if currentUser}}
+			{{#if isSubscribed}}
+				<button class="unfollow">Unfollow</button>
+			{{else}}
+				<button class="follow">Follow</button>
+			{{/if}}
+		{{else}}
+			
+		{{/if}}
+	</li>
+</template>
